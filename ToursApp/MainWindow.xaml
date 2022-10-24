@@ -26,7 +26,13 @@
         </Grid.RowDefinitions>
 
         <Image Source="Resources/Логотип.png" />
-        
+
+        <TextBlock Grid.Column="2" 
+                   Text="Header"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+
         <Grid Background="#bae3e8" 
               Panel.ZIndex="-2"
               Grid.ColumnSpan="5"/>
@@ -35,8 +41,16 @@
               Grid.Row="7"
               Grid.ColumnSpan="5"/>
 
-        <Frame Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="6"
+        <Frame NavigationUIVisibility="Hidden" 
+               ContentRendered="MainFrame_ContentRendered" 
+               Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="6"
                Name="MainFrame"/>
+
+        <Button Grid.Column="5" 
+                Content="Back"
+                Name="BtnBack"
+                Click="BtnBack_Click"/>
+
 
 
 
