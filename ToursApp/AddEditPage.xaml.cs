@@ -22,9 +22,13 @@ namespace ToursApp
     {
         private Hotel _currentHotel = new Hotel();
 
-        public AddEditPage()
+        public AddEditPage(Hotel selectedHotel)
         {
             InitializeComponent();
+
+            if (selectedHotel != null)
+                _currentHotel = selectedHotel;
+
             DataContext = _currentHotel;
             ComboCountries.ItemsSource = TyrFEntities.GetContext().Counts.ToList();
         }
