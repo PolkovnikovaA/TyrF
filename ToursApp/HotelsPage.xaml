@@ -17,7 +17,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название отеля" Binding="{Binding Name}" Width="*"/>
                 <DataGridTextColumn Header="Количество звезд" Binding="{Binding CountOfStars}" Width="150"/>
-                <DataGridTextColumn Header="Страна" Binding="{Binding Country.Name}" Width="250"/>
+                <DataGridTextColumn Header="Страна" Binding="{Binding Count.Name}" Width="250"/>
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

@@ -16,7 +16,6 @@ namespace ToursApp
     public partial class TyrFEntities : DbContext
     {
         private static TyrFEntities _context;
-
         public TyrFEntities()
             : base("name=TyrFEntities")
         {
@@ -28,7 +27,7 @@ namespace ToursApp
                 _context = new TyrFEntities();
             return _context;
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
